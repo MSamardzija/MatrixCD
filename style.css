@@ -1,0 +1,30 @@
+body{
+    background-image: url(matrix.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#main {
+    height: 98vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box{
+    text-align: center;
+    padding: 0% 0% 0% 3%;
+    color: #27e865;
+
+}
+
+.box div{
+    font-weight: 900;
+    font-size: 5rem;
+}
+
+.box p{
+    font-size: 3rem;
+    font-weight: 500;
+}
