@@ -1,62 +1,35 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
-
-<head>
-  <meta charset="utf-8">
-  <link rel="stylesheet" href="style.css">
-  <title>Count Down</title>
-</head>
-
-<body>
-  <div id="main">
-
-    <div class="box">
-      <div id="dani"></div>
-      <p>Days</p>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Count Down</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <canvas id="canv"></canvas>
+    <div id="main">
+      <div class="box">
+        <p>D@y$</p>
+        <div class="num" id="days"></div>
+      </div>
+      <div class="box">
+        <p>H0uЯ$</p>
+        <div class="num" id="hours"></div>
+      </div>
+      <div class="box">
+        <p>M1nut3$</p>
+        <div class="num" id="minutes"></div>
+      </div>
+      <div class="box">
+        <p>S3c0nd$</p>
+        <div class="num" id="seconds"></div>
+      </div>
     </div>
+    <script type="text/javascript" src="script.js"></script>
 
-    <div class="box">
-      <div id="sati"></div>
-      <p>Hours</p>
-    </div>
-
-    <div class="box">
-      <div id="minute"></div>
-      <p>Minutes</p>
-    </div>
-
-    <div class="box">
-      <div id="sekunde"></div>
-      <p>Seconds</p>
-    </div>
-
-  </div>
-
-
-  <script type="text/javascript">
-    var countDownDate = new Date('Dec 20, 2021 00:00:00').getTime();
-
-    var x = setInterval(function () {
-
-      var now = new Date().getTime();
-      var distance = countDownDate - now;
-
-      var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-      var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-      var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-      var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-      document.getElementById("dani").innerHTML = days;
-      document.getElementById("sati").innerHTML = hours;
-      document.getElementById("minute").innerHTML = minutes;
-      document.getElementById("sekunde").innerHTML = seconds;
-
-      if (distance < 0) {
-        clearInterval(x);
-        document.getElementById("demo").innerHTML = "EXPIRED";
-      }
-    }, 1000);
-  </script>
-</body>
-
+    <script src="scramble.js"></script>
+    <script src="scriptMX.js"></script>
+  </body>
 </html>
