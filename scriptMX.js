@@ -11,7 +11,7 @@ ctx.fillStyle = "#000";
 ctx.fillRect(0, 0, w, h);
 
 function matrix() {
-  ctx.fillStyle = "#0001";
+  ctx.fillStyle = "#0002";
   ctx.fillRect(0, 0, w, h);
 
   ctx.fillStyle = "#0f0";
