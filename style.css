@@ -3,44 +3,34 @@ body {
   background-color: black;
   margin: 0;
   padding: 0;
-  overflow-y: hidden !important;
-  /* Dodao posle */
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
+  overflow: hidden !important;
+  height: 100vh;
 }
 
-#canv {
-  height: 100vh;
+
+#main {
+  display: flex;
+  position: absolute;
+  flex-wrap: wrap;
+  background: #000000a4;
+  justify-content: center;
+  align-items: center;
   width: 100vw;
 }
 
-#main {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  background-color: #000000a4;
-  /*  */
-  justify-content: center;
-  align-items: center;
-  display: flex;
-}
-
 .box {
+  padding: 2.5%;
+  flex: 20%;
   color: #00d400;
-  font-size: 3rem;
-  display: inline-block;
-  vertical-align: top;
   text-transform: uppercase;
-  text-align: center;
-  padding: 30px;
+  z-index: 99999;
+text-align: center;
 }
 .box p {
   font-family:'Courier New', Courier, monospace;
   font-weight: 600;
   letter-spacing: 7px;
-  font-size: 3.7rem;
+  font-size: 2rem;
 }
 
 .num {
@@ -53,4 +43,6 @@ body {
   src: url("digital-7.ttf");
 }
 
-/* WTF */
+@media screen and (max-width: 576px) {
+  
+}
