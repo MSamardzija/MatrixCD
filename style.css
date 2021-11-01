@@ -27,7 +27,7 @@ body {
   background: #000000a4;
 }
 .box p {
-  font-family:'Courier New', Courier, monospace;
+  font-family: "Courier New", Courier, monospace;
   font-weight: 600;
   letter-spacing: 7px;
   font-size: 2.4rem;
@@ -45,22 +45,59 @@ body {
   src: url("digital-7.ttf");
 }
 
-@media screen and (max-width:992px) {
-  .box{
+.box:nth-child(1) p {
+  animation: 0.8s shake infinite alternate;
+}
+.box:nth-child(2) p {
+  animation: 0.5s shake infinite alternate;
+}
+.box:nth-child(3) p {
+  animation: 0.7s shake infinite alternate;
+}
+.box:nth-child(4) p {
+  animation: 1s shake infinite alternate;
+}
+
+@keyframes shake {
+  0% {
+    transform: skewX(-150deg);
+  }
+  5% {
+    transform: skewX(50deg);
+  }
+  10% {
+    transform: skewX(-150deg);
+  }
+  15% {
+    transform: skewX(50deg);
+  }
+  20% {
+    transform: skewX(0deg);
+  }
+  40%{
+    transform: translateX(3px);
+  }
+  100% {
+    transform: skewX(0deg);
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .box {
     flex: 50%;
     padding: 20px 0px;
-  }  
+  }
 }
 
 @media screen and (max-width: 576px) {
-  html{
-    overflow-y:visible;
+  html {
+    overflow-y: visible;
   }
-  .box{
+  .box {
     flex: 100%;
     padding: 0px;
   }
-  .num{
+  .num {
     font-size: 3rem;
   }
 }
