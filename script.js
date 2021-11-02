@@ -1,5 +1,5 @@
 // TIME
-var countDownDate = new Date("Dec 20, 2021 00:00:00").getTime();
+var countDownDate = new Date("Jan 01, 2022 00:00:00").getTime();
 
 var x = setInterval(function () {
   var now = new Date().getTime();
@@ -17,24 +17,8 @@ var x = setInterval(function () {
 
   if (distance < 0) {
     clearInterval(x);
-    document.getElementById("demo").innerHTML = "EXPIRED";
+    var ex = document.getElementById("main");
+    ex.innerHTML = "EXPIRED";
+    ex.classList.add("expired");
   }
-
-  const phrases = [
-    "$()",
-    "*",
-    "X_!",
-  ];
-  const el = document.querySelector("#days");
-  const fx = new TextScramble(el);
-  let counter = 0;
-
-  const next = () => {
-    fx.setText(phrases[counter]).then(() => {
-      setTimeout(next, 800);
-    });
-    counter = (counter + 1) % phrases.length;
-  };
-
-  next();
 }, 1000);
