@@ -14,11 +14,35 @@ var x = setInterval(function () {
   document.getElementById("hours").innerHTML = hours;
   document.getElementById("minutes").innerHTML = minutes;
   document.getElementById("seconds").innerHTML = seconds;
-
+  
   if (distance < 0) {
     clearInterval(x);
     var ex = document.getElementById("main");
     ex.innerHTML = "EXPIRED";
     ex.classList.add("expired");
+  }else{
+    setInterval(function(){
+      location.reload(); 
+    }, 900000)
   }
 }, 1000);
+
+setInterval(function (){
+  const text = String.fromCharCode(Math.random() * 128) + String.fromCharCode(Math.random() * 128);
+  document.getElementById("days").innerHTML = text;
+}, 1800)
+
+setInterval(function (){
+  const text = String.fromCharCode(Math.random() * 128);
+  document.getElementById("hours").innerHTML = text;
+}, 2200)
+
+setInterval(function (){
+  const text = String.fromCharCode(Math.random() * 128) + String.fromCharCode(Math.random() * 128);
+  document.getElementById("minutes").innerHTML = text;
+}, 2800)
+
+setInterval(function (){
+  const text = String.fromCharCode(Math.random() * 128);
+  document.getElementById("seconds").innerHTML = text;
+}, 3000)

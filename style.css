@@ -30,7 +30,7 @@ body {
   font-family: "Courier New", Courier, monospace;
   font-weight: 600;
   letter-spacing: 7px;
-  font-size: 2.4rem;
+  font-size: 3rem;
   margin-top: 0;
   margin-bottom: 1rem;
 }
@@ -40,7 +40,7 @@ body {
   font-size: 4.5rem;
 }
 
-.expired{
+.expired {
   color: white;
   font-size: 1.8rem;
   letter-spacing: 1.5rem;
@@ -82,7 +82,7 @@ body {
   20% {
     transform: skewX(0deg);
   }
-  30%{
+  30% {
     transform: translate(1px, 1px);
   }
   100% {
@@ -90,7 +90,7 @@ body {
   }
 }
 
-@media screen and (max-width: 992px) {
+@media screen and (max-width: 1260px) {
   .box {
     flex: 50%;
     padding: 20px 0px;
@@ -104,6 +104,10 @@ body {
   .box {
     flex: 100%;
     padding: 0px;
+  }
+
+  .box p {
+    font-size: 2.4rem;
   }
   .num {
     font-size: 3rem;
